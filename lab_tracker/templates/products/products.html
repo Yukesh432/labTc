@@ -1,0 +1,424 @@
+{% extends 'pages/index.html' %}
+{% load static %}
+{% block style %}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+    integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CShadows+Into+Light" rel="stylesheet"
+    type="text/css">
+<link rel="stylesheet" href="{% static 'vendor/font-awesome/css/font-awesome.min.css' %}">
+
+
+
+
+<link rel="stylesheet" href="{% static 'assets/public/css/shop.css' %}">
+<!-- <link rel="stylesheet" type="text/css" href="assets/public/css/bootstrap.min.css"> -->
+<link rel="stylesheet" type="text/css" href="http://sagarmatha.edu.np/assets/public/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="../maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="{% static 'assets/public/css/bootstrap-dropdownhover.min.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'assets/public/css/animate.min.css'%}">
+<link rel="stylesheet" type="text/css" href="{% static 'assets/public/css/bootstrap-submenu.min.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'assets/public/css/bootstrap.min2.css' %}">
+<!-- <link rel="stylesheet" type="text/css" href="assets/public/css/yamm.css">
+<link rel="stylesheet" type="text/css" href="assets/public/css/slick.css">
+<link rel="stylesheet" type="text/css" href="assets/public/css/slick-theme.css">
+<link rel="stylesheet" type="text/css" href="assets/public/css/custom.css"> -->
+<link rel="stylesheet" type="text/css" href="{% static 'assets/public/css/style.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'assets/public/css/magnific-popup.css' %}">
+<link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'assets/public/css/theme-elements.css' %}">
+
+
+</head>
+
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <nav class="search">
+
+        <form class="form search">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+
+            <button class="btn btn-default" id='sear' type="submit"><i class="fa fa-search"></i>
+        </form>
+    </nav>
+    <div class="row">
+
+        <div class="col-md-3 col-md-pull-9 sidebar shop-sidebar">
+
+            <div class="panel-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a class="accordion-toggle" data-toggle="collapse" href="#panel-filter-category">
+                                Categories
+                            </a>
+                        </h4>
+                    </div>
+                    <div class="list-group" id="list-tab" role="tablist">
+                        <div id="panel-filter-category" class="accordion-body collapse in">
+                            <div class="panel-body">
+                                <div class="list-group" id="list-tab" role="tablist">
+                                    <a class="list-group-item list-group-item-action active" id="list-arduino-list"
+                                        data-toggle="list" href="#list-arduino" role="tab"
+                                        aria-controls="arduino">Arduino</a>
+                                    <a class="list-group-item list-group-item-action" id="list-motor-list"
+                                        data-toggle="list" href="#list-motor" role="tab"
+                                        aria-controls="motor">Motors</a>
+                                    <a class="list-group-item list-group-item-action" id="list-capacitor-list"
+                                        data-toggle="list" href="#list-capacitor" role="tab"
+                                        aria-controls="capacitor">Capacitor</a>
+                                    <a class="list-group-item list-group-item-action" id="list-led-list"
+                                        data-toggle="list" href="#list-led" role="tab" aria-controls="led">LED</a>
+                                    <a class="list-group-item list-group-item-action" id="list-sensors-list"
+                                        data-toggle="list" href="#list-sensors" role="tab"
+                                        aria-controls="sensors">Sensors</a>
+                                    <a class="list-group-item list-group-item-action" id="list-jumper_wires-list"
+                                        data-toggle="list" href="#list-jumper_wires" role="tab"
+                                        aria-controls="jumper_wires">Jumper Wires</a>
+                                    <a class="list-group-item list-group-item-action" id="list-matrix_board-list"
+                                        data-toggle="list" href="#list-matrix_board" role="tab"
+                                        aria-controls="matrix_board">Matrix Board</a>
+                                    <a class="list-group-item list-group-item-action" id="list-iron-list"
+                                        data-toggle="list" href="#list-iron" role="tab" aria-controls="iron">Soldering
+                                        Iron</a>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="col-md-9 col-md-push-3">
+            <div class="tab-content" id="nav-tabContent">
+                <div class="tab-pane fade show active" id="list-arduino" role="tabpanel"
+                    aria-labelledby="list-arduino-list">
+                    <ul class=" products-grid columns4 ">
+                        {% if microcontrollers %}
+                        {% for microcontroller in microcontrollers %}
+
+
+
+                        <li>
+                            <div class="product">
+                                <figure class="product-image-area">
+                                    <a href="{% url 'productview' %}" title="Product Name" class="product-image">
+                                        <img src='{{ microcontroller.photo_main.url }}'
+                                            alt="Product Name">
+                                    </a>
+                                    <a href="{% url 'productview' %}" class="product-quickview" data-product="16">
+                                        <i class="fa fa-share-square-o"></i>
+                                        <span>Quicky View</span>
+                                    </a>
+
+                                </figure>
+                                <div class="product-details-area">
+                                    <h2 class="product-name">
+                                        <a href="product/arduino-uno-r3-board-in-nepal.html"
+                                            title="Arduino Uno R3 board  in Nepal">
+                                            {{microcontroller.title}}
+                                        </a>
+                                    </h2>
+
+                                    <div class="product-actions" data-product="16">
+
+                                        <a href="contact.html" class="enquiry" title="Enquiry"
+                                            data-loading-text="Loading...">
+                                            <i class="fa fa-info"></i>
+                                            <span>Enquiry</span>
+                                        </a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        {% endfor %}
+                        {% endif %}
+
+
+                    </ul>
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination">
+                            <li class="page-item disabled">
+                                <a class="page-link " href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item active" aria-current="page">
+                                <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                 <a class="page-link" href="#">Next</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="tab-pane fade" id="list-motor" role="tabpanel" aria-labelledby="list-motor-list">Motori
+                     <ul class=" products-grid columns4 ">
+                        {% if motors %}
+                        {% for motor in motors %}
+
+
+
+                        <li>
+                            <div class="product">
+                                <figure class="product-image-area">
+                                    <a href="{% url 'productview' %}" title="Product Name" class="product-image">
+                                        <img src='{{ motor.photo_main.url }}'
+                                            alt="Product Name">
+                                    </a>
+                                    <a href="{% url 'productview' %}" class="product-quickview" data-product="16">
+                                        <i class="fa fa-share-square-o"></i>
+                                        <span>Quicky View</span>
+                                    </a>
+
+                                </figure>
+                                <div class="product-details-area">
+                                    <h2 class="product-name">
+                                        <a href="product/arduino-uno-r3-board-in-nepal.html"
+                                            title="Arduino Uno R3 board  in Nepal">
+                                            {{motor.title}}
+                                        </a>
+                                    </h2>
+
+                                    <div class="product-actions" data-product="16">
+
+                                        <a href="contact.html" class="enquiry" title="Enquiry"
+                                            data-loading-text="Loading...">
+                                            <i class="fa fa-info"></i>
+                                            <span>Enquiry</span>
+                                        </a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        {% endfor %}
+                        {% endif %}
+
+
+                    </ul>
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination">
+                            <li class="page-item disabled">
+                                <a class="page-link " href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item active" aria-current="page">
+                                <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">Next</a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                </div>
+                <div class="tab-pane fade" id="list-capacitor" role="tabpanel" aria-labelledby="list-capacitor-list">
+                    Capacitor</div>
+                <div class="tab-pane fade" id="list-led" role="tabpanel" aria-labelledby="list-led-list">LED
+                    <ul class=" products-grid columns4 ">
+                        {% if leds %}
+                        {% for led in leds %}
+
+
+
+                        <li>
+                            <div class="product">
+                                <figure class="product-image-area">
+                                    <a href="{% url 'productview' %}" title="Product Name" class="product-image">
+                                        <img src='{{ led.photo_main.url }}'
+                                            alt="Product Name">
+                                    </a>
+                                    <a href="{% url 'productview' %}" class="product-quickview" data-product="16">
+                                        <i class="fa fa-share-square-o"></i>
+                                        <span>Quicky View</span>
+                                    </a>
+
+                                </figure>
+                                <div class="product-details-area">
+                                    <h2 class="product-name">
+                                        <a href="product/arduino-uno-r3-board-in-nepal.html"
+                                            title="Arduino Uno R3 board  in Nepal">
+                                            {{led.title}}
+                                        </a>
+                                    </h2>
+
+                                    <div class="product-actions" data-product="16">
+
+                                        <a href="contact.html" class="enquiry" title="Enquiry"
+                                            data-loading-text="Loading...">
+                                            <i class="fa fa-info"></i>
+                                            <span>Enquiry</span>
+                                        </a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        {% endfor %}
+                        {% endif %}
+
+
+                    </ul>
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination">
+                            <li class="page-item disabled">
+                                <a class="page-link " href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item active" aria-current="page">
+                                <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">Next</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                
+                
+           
+                <div class="tab-pane fade" id="list-sensors" role="tabpanel" aria-labelledby="list-led-list">Sensors
+                    <ul class=" products-grid columns4 ">
+                        {% if sensors %}
+                        {% for sensor in sensors %}
+
+
+
+                        <li>
+                            <div class="product">
+                                <figure class="product-image-area">
+                                    <a href="{% url 'productview' %}" title="Product Name" class="product-image">
+                                        <img src='{{ sensor.photo_main.url }}'
+                                            alt="Product Name">
+                                    </a>
+                                    <a href="{% url 'productview' %}" class="product-quickview" data-product="16">
+                                        <i class="fa fa-share-square-o"></i>
+                                        <span>Quicky View</span>
+                                    </a>
+
+                                </figure>
+                                <div class="product-details-area">
+                                    <h2 class="product-name">
+                                        <a href="product/arduino-uno-r3-board-in-nepal.html"
+                                            title="Arduino Uno R3 board  in Nepal">
+                                            {{sensor.title}}
+                                        </a>
+                                    </h2>
+
+                                    <div class="product-actions" data-product="16">
+
+                                        <a href="contact.html" class="enquiry" title="Enquiry"
+                                            data-loading-text="Loading...">
+                                            <i class="fa fa-info"></i>
+                                            <span>Enquiry</span>
+                                        </a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        {% endfor %}
+                        {% endif %}
+
+
+                    </ul>
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination">
+                            <li class="page-item disabled">
+                                <a class="page-link " href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item active" aria-current="page">
+                                <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">Next</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                
+                
+                <div class="tab-pane fade" id="list-jumper_wires" role="tabpanel" aria-labelledby="list-led-list">
+                    jumper_wires
+                    <ul class=" products-grid columns4 ">
+                        {% if wires %}
+                        {% for wire in wires %}
+
+
+
+                        <li>
+                            <div class="product">
+                                <figure class="product-image-area">
+                                    <a href="{% url 'productview' %}" title="Product Name" class="product-image">
+                                        <img src='{{ wire.photo_main.url }}'
+                                            alt="Product Name">
+                                    </a>
+                                    <a href="{% url 'productview' %}" class="product-quickview" data-product="16">
+                                        <i class="fa fa-share-square-o"></i>
+                                        <span>Quicky View</span>
+                                    </a>
+
+                                </figure>
+                                <div class="product-details-area">
+                                    <h2 class="product-name">
+                                        <a href="product/arduino-uno-r3-board-in-nepal.html"
+                                            title="Arduino Uno R3 board  in Nepal">
+                                            {{wire.title}}
+                                        </a>
+                                    </h2>
+
+                                    <div class="product-actions" data-product="16">
+
+                                        <a href="contact.html" class="enquiry" title="Enquiry"
+                                            data-loading-text="Loading...">
+                                            <i class="fa fa-info"></i>
+                                            <span>Enquiry</span>
+                                        </a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        {% endfor %}
+                        {% endif %}
+
+
+                    </ul>
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination">
+                            <li class="page-item disabled">
+                                <a class="page-link " href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item active" aria-current="page">
+                                <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">Next</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+        
+                <div class="tab-pane fade" id="list-matrix_board" role="tabpanel" aria-labelledby="list-led-list">
+                    matrix_board</div>
+                <div class="tab-pane fade" id="list-iron" role="tabpanel" aria-labelledby="list-led-list">iron</div>
+
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

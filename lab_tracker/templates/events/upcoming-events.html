@@ -1,0 +1,76 @@
+{% extends 'pages/index.html' %}
+{% load static %}
+<body>
+   
+{% block content %}
+    <main role="main" class="container">
+      
+        <div class="row">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light visible navbar-expand">
+     
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse visible" id="navbarNavAltMarkup">
+                  <div class="navbar-nav">
+                    <a class="nav-link active" href="{% url 'ongoing_events' %}">Ongoing Events <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="{% url 'upcoming_events' %}">Upcoming Events</a>
+                    <a class="nav-link" href="{% url 'past_events' %}">Past Events</a>
+          
+                  </div>
+                </div>
+              </nav>
+            <div class="col-md-12">
+
+                <div class="alert alert-{{message.tags}}">
+                    <article class="media content-section">
+                        <img class="rounded-circle article-img" src="{% static 'img/ongoing_events/IOT.jpg' %}" alt="prof">
+                        <div class="media-body">
+                            <div class="article-metadata">
+                                <a class="mr-2" href="{% url 'event_page' %}">Internet of Things Systems: from Sensor and Embedded Computing
+                                    to Data Analytics Paradigm</a>
+                                <!-- <small class="text-muted">2020/7/21</small> -->
+                            </div>
+                            <h2><a class="article-title">Date: 2020/08/05 &nbsp&nbsp Time: 8:00am</a></h2>
+                            <p class="article-content">IEEE Nepal Sub-section is going to organize a webinar on
+                                "Internet of Things Systems: from Sensor and Embedded Computing to Data Analytics
+                                Paradigm. Mr. Rajeev Kanth, D.Sc. (Tech.) & Docent Adjunct Professor, University of
+                                Turku Finland Senior Lecturer (Assoc. Prof.), Savonia University of Applied Sciences
+                                will be our speaker for this webinar.
+                            </p>
+                        </div>
+                    </article>
+             
+
+
+                    <div class="container">
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination">
+                                <li class="page-item disabled">
+                                    <a class="page-link " href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                                </li>
+                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item active" aria-current="page">
+                                    <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#">Next</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+{% endblock %}
+
+</body>
+
+<!-- Mirrored from sagarmatha.edu.np/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 16 Jul 2020 08:44:18 GMT -->
+
+</html>
