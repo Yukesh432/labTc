@@ -4463,14 +4463,14 @@ body.no-padding {
     font-size: 14px;
 }
 
-.search {
+/* .search {
     align-items: right;
     text-align: right;
     display: flex;
     justify-content: right;
     width: 100%;
     padding: 5px;
-}
+} */
 
 #sear {
     color: green;
@@ -4611,4 +4611,142 @@ a.article-title:hover {
 }
 #link{
     color:blue;
+}
+#button-lg{
+    background-color:green;
+    color: white;
+    cursor:pointer;
+    border:none;
+    border-radius:3px;
+    padding: 8px;
+width: 61px;
+}
+#button-lg:hover{
+    background-color:rgba(2, 150, 2, 0.849);
+
+}
+.table-label{
+    padding:7px;
+    margin:auto;
+    border: 2px solid rgb(175, 175, 175);
+    /* text-align: center; */
+}
+.mx-auto{
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* justify-items: center; */
+}
+strong{
+    font-family: Arial, Helvetica, sans-serif;
+    color:rgb(110, 110, 110);
+}
+
+
+
+
+@media (max-width: 920px){
+    .asdf{
+  
+ margin:0;
+}
+}
+.product-box {
+    margin: 70px;
+}
+
+@media (max-width: 920px) {
+    .product-box {
+
+        margin: 0;
+    }
+    .row{
+        display: block;
+    }
+}
+.search {
+
+    float: right;
+    margin-left: 320px;
+    width: 45%;
+    clear: both;
+    display: flex;
+    margin-top: 4px;
+  
+}
+
+@media (max-width: 920px) {
+    .search {
+
+        float:right;
+margin: 0;
+width:100%;
+clear:both;
+margin-top: 3px;
+}
+
+
+    }
+
+.searc {
+
+    /* float:right;
+  margin-left: 320px;
+  width:45%;
+  clear:both; */
+    position: relative;
+    margin-left: 320px;
+    width: 45%;
+    right: -212px;
+    display: flex;
+    top: 6px;
+}
+
+@media (max-width: 920px) {
+    .searc {
+
+        /* float:right;
+margin: 0;
+width:100%;
+clear:both;
+} */
+position: relative;
+margin-left: 0px;
+width: 100%;
+right: 0px;
+
+    }
+}
+@media (min-width: 921px) and (max-width:1023px) {
+    .searc {
+
+        /* float:right;
+margin: 0;
+width:100%;
+clear:both;
+} */
+position: relative;
+margin-left: 320px;
+/* width: 45%; */
+/* right: -212px; */
+display: flex;
+top: 6px;
+flex-wrap: wrap;
+
+    }
+}
+@media (min-width: 1024px) and (max-width:1200px) {
+    .searc {
+        position: relative;
+        /* margin-left: 320px; */
+        width: 100%;
+        /* right: -212px; */
+        display: flex;
+        top: 6px;
+    }
+
+    
 }
