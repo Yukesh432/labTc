@@ -9,4 +9,6 @@ def about(request):
 
 def faq(request):
     return render(request, 'pages/faq.html')
+
+
  

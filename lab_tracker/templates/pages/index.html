@@ -11,14 +11,17 @@
     <title>Lab Tracker</title>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="description" content="Sagarmatha Engineering College | Re-structuring your brain to discover engineer in you." />
-    <meta name="keywords" content="Civil Engineering, Electrical Engineering, Computer Engineering, Electronics Engineering" />
+    <meta name="description"
+        content="Sagarmatha Engineering College | Re-structuring your brain to discover engineer in you." />
+    <meta name="keywords"
+        content="Civil Engineering, Electrical Engineering, Computer Engineering, Electronics Engineering" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--Contains css of the page-->
 
-{% block style %}
+    {% block style %}
     <link rel="stylesheet" type="text/css" href="http://sagarmatha.edu.np/assets/public/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="../maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="../maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <link rel="stylesheet" type="text/css" href="assets/public/css/bootstrap-dropdownhover.min.css">
     <link rel="stylesheet" type="text/css" href="{% static 'assets/public/css/animate.min.css' %}">
@@ -29,16 +32,24 @@
     <link rel="stylesheet" type="text/css" href="{% static 'assets/public/css/custom.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'assets/public/css/bootstrap.min.css' %}">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 
     <link rel="stylesheet" type="text/css" href="{% static 'assets/public/css/style.css' %}">
 
     <link rel="stylesheet" type="text/css" href="{% static 'assets/public/css/magnific-popup.css' %}">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CShadows+Into+Light" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CShadows+Into+Light"
+        rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="{% static 'vendor/font-awesome/css/font-awesome.min.css' %}">
 </head>
 {% endblock %}
+<style>
+    .btn-primary {
+        border: none;
+    }
+</style>
+
 <body>
     <!-- Navbar starts  -->
     <nav class="navbar yamm navbar-default fixed-top">
@@ -46,15 +57,17 @@
 
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-      
-        </button>
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
 
-                <a class="navbar-brand" href="http://sagarmatha.edu.np"><img src="{% static 'assets/public/img/sagarmatha.png' %}"></a>
+                </button>
+
+                <a class="navbar-brand" href="http://sagarmatha.edu.np"><img
+                        src="{% static 'assets/public/img/sagarmatha.png' %}"></a>
 
 
             </div>
@@ -82,7 +95,7 @@
                         }
                     </style>
                     <li class="dropdown mega-dropdown">
-                        <a href="{% url 'about' %}" role="button"><i class="fa fa-address-book about"></i>About              </a>
+                        <a href="{% url 'about' %}" role="button"><i class="fa fa-address-book about"></i>About </a>
 
 
                     </li>
@@ -93,9 +106,10 @@
                             color: #008e5c;
                         }
                     </style>
-                  
+
                     <li class="dropdown mega-dropdown">
-                        <a href="{% url 'products' %}" role="button"><i class="fa fa-th" aria-hidden="true"></i>Category           </a>
+                        <a href="{% url 'products' %}" role="button"><i class="fa fa-th" aria-hidden="true"></i>Category
+                        </a>
                     </li>
 
                     <style type="text/css">
@@ -106,7 +120,7 @@
                         }
                     </style>
                     <li class="dropdown mega-dropdown">
-                        <a href="{% url 'login' %}" role="button"><i class="fa fa-rss" aria-hidden="true"></i>Blog              </a>
+                        <a href="{% url 'login' %}" role="button"><i class="fa fa-rss" aria-hidden="true"></i>Blog </a>
 
 
                     </li>
@@ -130,7 +144,7 @@
                         }
                     </style>
                     <li class="dropdown mega-dropdown">
-                        <a href="{% url 'login' %}" role="button"><i class="fa fa-envelope-open"></i>Contact  </a>
+                        <a href="{% url 'login' %}" role="button"><i class="fa fa-envelope-open"></i>Contact </a>
 
 
                     </li>
@@ -142,7 +156,8 @@
                         }
                     </style>
                     <li class="dropdown mega-dropdown">
-                        <a href="{% url 'faq' %}" role="button"><i class="fa fa-info-circle" aria-hidden="true"></i>FAQ           </a>
+                        <a href="{% url 'faq' %}" role="button"><i class="fa fa-info-circle" aria-hidden="true"></i>FAQ
+                        </a>
 
                     </li>
                     <style type="text/css">
@@ -153,7 +168,8 @@
                         }
                     </style>
                     <li class="dropdown mega-dropdown">
-                        <a href="{% url 'login' %}" role="button"><i class="fa fa-sign-in" aria-hidden="true"></i>Login          </a>
+                        <a href="{% url 'login' %}" role="button"><i class="fa fa-sign-in" aria-hidden="true"></i>Login
+                        </a>
 
                     </li>
                     <style type="text/css">
@@ -164,7 +180,8 @@
                         }
                     </style>
                     <li class="dropdown mega-dropdown">
-                        <a href="{% url 'register' %}" role="button"><i class="fa fa-sign-in" aria-hidden="true"></i>Register          </a>
+                        <a href="{% url 'register' %}" role="button"><i class="fa fa-sign-in"
+                                aria-hidden="true"></i>Register </a>
 
                     </li>
                 </ul>
@@ -175,27 +192,27 @@
                         <a href="{% url 'index' %}">Lab Tracker</a>
                     </li>
                     <li class="dropdown ">
-                        <a href="{% url 'about' %}"><i class="fa fa-address-book about"></i>About         </a>
+                        <a href="{% url 'about' %}"><i class="fa fa-address-book about"></i>About </a>
 
                     </li>
                     <li class="dropdown ">
-                        <a href="{% url 'products' %}"><i class="fa fa-th" aria-hidden="true"></i>Category           </a>
+                        <a href="{% url 'products' %}"><i class="fa fa-th" aria-hidden="true"></i>Category </a>
                     </li>
                     <li class="dropdown ">
-                        <a href="{% url 'login' %}"><i class="fa fa-rss" aria-hidden="true"></i>Blog              </a>
+                        <a href="{% url 'login' %}"><i class="fa fa-rss" aria-hidden="true"></i>Blog </a>
                     </li>
                     <li class="dropdown ">
                         <a href="{% url 'login' %}"><i class="fa fa-envelope-open"></i>Contact</a></li>
                     </li>
-                  
+
                     <li class="dropdown ">
-                        <a href="{% url 'faq' %}"><i class="fa fa-info-circle" aria-hidden="true"></i>FAQ           </a>
+                        <a href="{% url 'faq' %}"><i class="fa fa-info-circle" aria-hidden="true"></i>FAQ </a>
                     </li>
                     <li class="dropdown ">
-                        <a href="{% url 'login' %}"><i class="fa fa-sign-in" aria-hidden="true"></i>Login          </a>
+                        <a href="{% url 'login' %}"><i class="fa fa-sign-in" aria-hidden="true"></i>Login </a>
                     </li>
                     <li class="dropdown ">
-                        <a href="{% url 'register' %}"><i class="fa fa-sign-in" aria-hidden="true"></i>Register          </a>
+                        <a href="{% url 'register' %}"><i class="fa fa-sign-in" aria-hidden="true"></i>Register </a>
                     </li>
                 </ul>
             </div>
@@ -203,10 +220,13 @@
     </nav>
     <!-- Navbar ends -->
     {% block content %}
-    <div class="container-fluid">
-        <nav class="search">
+  
 
-            <form class="form search">
+
+    <div class="container-fluid">
+        <nav class="searc">
+
+            <form class="form searc">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
 
                 <button class="btn btn-default" id='sear' type="submit"><i class="fa fa-search"></i>
@@ -226,206 +246,245 @@
                 <div class="carousel-item active">
                     <div class="col-xs-3 col-sm-3 col-md-3">
                         <div class="card" style="width: 18rem;">
-                            <img src='{% static "img/microcontroller/arduino-373994_1280.jpg" %}' class="card-img-top" alt="img/small-default-product.jpg">
+                            <img src='{% static "img/microcontroller/arduino-373994_1280.jpg" %}' class="card-img-top"
+                                alt="img/small-default-product.jpg">
                             <div class="card-body">
                                 <h5 class="card-title">Arduoino Uno</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
                                 Status: <button id="button">Available</button>
-                <a href="{% url 'productview' %}"><button id="button2" class="btn btn-primary cart ">View</button></a>
-    </div>
-    </div>
-    </div>
+                                <a href="{% url 'productview' %}"><button id="button2"
+                                        class="btn btn-primary cart ">View</button></a>
+                            </div>
+                        </div>
+                    </div>
 
-    <div class="col-xs-3 col-sm-3 col-md-3">
-        <div class="card" style="width: 18rem;">
-            <img src='{% static "img/microcontroller/raspberry-pi-572481_1280.jpg" %}' class="card-img-top" alt="img/small-default-product.jpg">
-            <div class="card-body">
-                <h5 class="card-title">Raspberry Pie</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                Status: <button id="button">Available</button>
-                <a href="{% url 'productview' %}"><button id="button2" class="btn btn-primary cart ">View</button></a>
+                    <div class="col-xs-3 col-sm-3 col-md-3">
+                        <div class="card" style="width: 18rem;">
+                            <img src='{% static "img/microcontroller/raspberry-pi-572481_1280.jpg" %}'
+                                class="card-img-top" alt="img/small-default-product.jpg">
+                            <div class="card-body">
+                                <h5 class="card-title">Raspberry Pie</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                                Status: <button id="button">Available</button>
+                                <a href="{% url 'productview' %}"><button id="button2"
+                                        class="btn btn-primary cart ">View</button></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-3 col-sm-3 col-md-3">
+                        <div class="card" style="width: 18rem;">
+                            <img src='{% static "img/microcontroller/unoo.jpg" %}' class="card-img-top"
+                                alt="img/small-default-product.jpg">
+                            <div class="card-body">
+                                <h5 class="card-title">Microcontroller 8085</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                                Status: <button id="button">Available</button>
+                                <a href="{% url 'productview' %}"><button id="button2"
+                                        class="btn btn-primary cart ">View</button></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-3 col-sm-3 col-md-3">
+                        <div class="card" style="width: 18rem;">
+                            <img src='{% static "img/microcontroller/nano.jpg" %}' class="card-img-top"
+                                alt="img/small-default-product.jpg">
+                            <div class="card-body">
+                                <h5 class="card-title">Arduino Nano</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                                Status: <button id="button">Available</button>
+                                <a href="{% url 'productview' %}"><button id="button2"
+                                        class="btn btn-primary cart ">View</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="carousel-item">
+                    <div class="col-xs-3 col-sm-3 col-md-3">
+                        <div class="card" style="width: 18rem;">
+                            <img src='{% static "img/microcontroller/arduino-373994_1280.jpg" %}' class="card-img-top"
+                                alt="img/small-default-product.jpg">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                                Status: <button id="button">Available</button>
+                                <a href="productview.html"><button id="button2"
+                                        class="btn btn-primary cart ">View</button></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-3 col-sm-3 col-md-3">
+                        <div class="card" style="width: 18rem;">
+                            <img src='{% static "img/microcontroller/arduino-373994_1280.jpg" %}' class="card-img-top"
+                                alt="img/small-default-product.jpg">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                                Status: <button id="button">Available</button>
+                                <a href="{% url 'productview' %}"><button id="button2"
+                                        class="btn btn-primary cart ">View</button></a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <!-- left and right controls for the slide -->
+
+                <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#demo" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
             </div>
         </div>
-    </div>
+        <div id="demo1" class="carousel slide my-3" data-ride="carousel">
+            <ul class="carousel-indicators">
+                <li data-target="#demo1" data-slide-to="3" class="active"></li>
+                <li data-target="#demo1" data-slide-to="4"></li>
+                <li data-target="#demo1" data-slide-to="5"></li>
+            </ul>
 
-    <div class="col-xs-3 col-sm-3 col-md-3">
-        <div class="card" style="width: 18rem;">
-            <img src='{% static "img/microcontroller/unoo.jpg" %}' class="card-img-top" alt="img/small-default-product.jpg">
-            <div class="card-body">
-                <h5 class="card-title">Microcontroller 8085</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                Status: <button id="button">Available</button>
-                <a href="{% url 'productview' %}"><button id="button2" class="btn btn-primary cart ">View</button></a>
+            <!--Slideshow starts here -->
+            <div class="container carousel-inner no-padding">
+                <h4 id='title'>Drivers</h4>
+
+                <div class="carousel-item active">
+                    <div class="col-xs-3 col-sm-3 col-md-3">
+                        <div class="card" style="width: 18rem;">
+                            <img src='{% static "img/driver/download.jpg" %}' class="card-img-top"
+                                alt="img/small-default-product.jpg">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                                Status: <button id="button">Available</button>
+                                <a href="{% url 'productview' %}"><button id="button2"
+                                        class="btn btn-primary cart ">View</button></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-3 col-sm-3 col-md-3">
+                        <div class="card" style="width: 18rem;">
+                            <img src='{% static "img/driver/download.jpg" %}' class="card-img-top"
+                                alt="img/small-default-product.jpg">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                                Status: <button id="button">Available</button>
+                                <a href="{% url 'productview' %}"><button id="button2"
+                                        class="btn btn-primary cart ">View</button></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-3 col-sm-3 col-md-3">
+                        <div class="card" style="width: 18rem;">
+                            <img src='{% static "img/driver/download.jpg" %}' class="card-img-top"
+                                alt="img/small-default-product.jpg">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                                Status: <button id="button">Available</button>
+                                <a href="{% url 'productview' %}"><button id="button2"
+                                        class="btn btn-primary cart ">View</button></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-3 col-sm-3 col-md-3">
+                        <div class="card" style="width: 18rem;">
+                            <img src='{% static "img/driver/download.jpg" %}' class="card-img-top"
+                                alt="img/small-default-product.jpg">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                                Status: <button id="button">Available</button>
+                                <a href="{% url 'productview' %}"><button id="button2"
+                                        class="btn btn-primary cart ">View</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="carousel-item">
+                    <div class="col-xs-3 col-sm-3 col-md-3">
+                        <div class="card" style="width: 18rem;">
+                            <img src='{% static "img/driver/download.jpg" %}' class="card-img-top"
+                                alt="img/small-default-product.jpg">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                                Status: <button id="button">Available</button>
+                                <a href="{% url 'productview' %}"><button id="button2"
+                                        class="btn btn-primary cart ">View</button></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-3 col-sm-3 col-md-3">
+                        <div class="card" style="width: 18rem;">
+                            <img src='{% static "img/driver/download.jpg" %}' class="card-img-top"
+                                alt="img/small-default-product.jpg">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                                Status: <button id="button">Available</button>
+                                <a href="{% url 'productview' %}"><button id="button2"
+                                        class="btn btn-primary cart ">View</button></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-3 col-sm-3 col-md-3">
+                        <div class="card" style="width: 18rem;">
+                            <img src='{% static "img/driver/download.jpg" %}' class="card-img-top"
+                                alt="img/small-default-product.jpg">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.</p>
+                                Status: <button id="button">Available</button>
+                                <a href="{% url 'productview' %}"><button id="button2"
+                                        class="btn btn-primary cart ">View</button></a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+                <!-- left and right controls for the slide -->
+
+                <a class="carousel-control-prev" href="#demo1" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#demo1" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
             </div>
         </div>
-    </div>
-
-    <div class="col-xs-3 col-sm-3 col-md-3">
-        <div class="card" style="width: 18rem;">
-            <img src='{% static "img/microcontroller/nano.jpg" %}' class="card-img-top" alt="img/small-default-product.jpg">
-            <div class="card-body">
-                <h5 class="card-title">Arduino Nano</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                Status: <button id="button">Available</button>
-                <a href="{% url 'productview' %}"><button id="button2" class="btn btn-primary cart ">View</button></a>
-            </div>
-        </div>
-    </div>
-    </div>
-
-
-
-    <div class="carousel-item">
-        <div class="col-xs-3 col-sm-3 col-md-3">
-            <div class="card" style="width: 18rem;">
-                <img src='{% static "img/microcontroller/arduino-373994_1280.jpg" %}' class="card-img-top" alt="img/small-default-product.jpg">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    Status: <button id="button">Available</button>
-                    <a href="productview.html"><button id="button2" class="btn btn-primary cart ">View</button></a>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-xs-3 col-sm-3 col-md-3">
-            <div class="card" style="width: 18rem;">
-                <img src='{% static "img/microcontroller/arduino-373994_1280.jpg" %}' class="card-img-top" alt="img/small-default-product.jpg">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    Status: <button id="button">Available</button>
-                    <a href="{% url 'productview' %}"><button id="button2" class="btn btn-primary cart ">View</button></a>
-                </div>
-            </div>
-        </div>
-
-
-    </div>
-    <!-- left and right controls for the slide -->
-
-    <a class="carousel-control-prev" href="#demo" data-slide="prev">
-        <span class="carousel-control-prev-icon"></span>
-    </a>
-    <a class="carousel-control-next" href="#demo" data-slide="next">
-        <span class="carousel-control-next-icon"></span>
-    </a>
-    </div>
-    </div>
-    <div id="demo1" class="carousel slide my-3" data-ride="carousel">
-        <ul class="carousel-indicators">
-            <li data-target="#demo1" data-slide-to="3" class="active"></li>
-            <li data-target="#demo1" data-slide-to="4"></li>
-            <li data-target="#demo1" data-slide-to="5"></li>
-        </ul>
-
-        <!--Slideshow starts here -->
-        <div class="container carousel-inner no-padding">
-            <h4 id='title'>Drivers</h4>
-
-            <div class="carousel-item active">
-                <div class="col-xs-3 col-sm-3 col-md-3">
-                    <div class="card" style="width: 18rem;">
-                        <img src='{% static "img/driver/download.jpg" %}' class="card-img-top" alt="img/small-default-product.jpg">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            Status: <button id="button">Available</button>
-                            <a href="{% url 'productview' %}"><button id="button2" class="btn btn-primary cart ">View</button></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xs-3 col-sm-3 col-md-3">
-                    <div class="card" style="width: 18rem;">
-                        <img src='{% static "img/driver/download.jpg" %}' class="card-img-top" alt="img/small-default-product.jpg">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            Status: <button id="button">Available</button>
-                            <a href="{% url 'productview' %}"><button id="button2" class="btn btn-primary cart ">View</button></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xs-3 col-sm-3 col-md-3">
-                    <div class="card" style="width: 18rem;">
-                        <img src='{% static "img/driver/download.jpg" %}' class="card-img-top" alt="img/small-default-product.jpg">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            Status: <button id="button">Available</button>
-                            <a href="{% url 'productview' %}"><button id="button2" class="btn btn-primary cart ">View</button></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xs-3 col-sm-3 col-md-3">
-                    <div class="card" style="width: 18rem;">
-                        <img src='{% static "img/driver/download.jpg" %}' class="card-img-top" alt="img/small-default-product.jpg">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            Status: <button id="button">Available</button>
-                            <a href="{% url 'productview' %}"><button id="button2" class="btn btn-primary cart ">View</button></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-
-            <div class="carousel-item">
-                <div class="col-xs-3 col-sm-3 col-md-3">
-                    <div class="card" style="width: 18rem;">
-                        <img src='{% static "img/driver/download.jpg" %}' class="card-img-top" alt="img/small-default-product.jpg">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            Status: <button id="button">Available</button>
-                            <a href="{% url 'productview' %}"><button id="button2" class="btn btn-primary cart ">View</button></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xs-3 col-sm-3 col-md-3">
-                    <div class="card" style="width: 18rem;">
-                        <img src='{% static "img/driver/download.jpg" %}' class="card-img-top" alt="img/small-default-product.jpg">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            Status: <button id="button">Available</button>
-                            <a href="{% url 'productview' %}"><button id="button2" class="btn btn-primary cart ">View</button></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-xs-3 col-sm-3 col-md-3">
-                    <div class="card" style="width: 18rem;">
-                        <img src='{% static "img/driver/download.jpg" %}' class="card-img-top" alt="img/small-default-product.jpg">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            Status: <button id="button">Available</button>
-                            <a href="{% url 'productview' %}"><button id="button2" class="btn btn-primary cart ">View</button></a>
-                        </div>
-                    </div>
-                </div>
-
-
-            </div>
-
-
-            <!-- left and right controls for the slide -->
-
-            <a class="carousel-control-prev" href="#demo1" data-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-            </a>
-            <a class="carousel-control-next" href="#demo1" data-slide="next">
-                <span class="carousel-control-next-icon"></span>
-            </a>
-        </div>
-    </div>
 
 
     </div>
@@ -456,9 +515,15 @@
                         <aside class="widget widget-links">
                             <h3 class="widget-title">Quick Links</h3>
                             <ul class="menu">
-                                <li><a title="Training & Placement Units" href="http://sagarmatha.edu.np/home/placements/tpu">Training & Placement Units</a></li>
-                                <li><a title="Career options at Sagarmatha" href="http://sagarmatha.edu.np/home/human-resource/careers">Career options at Sagarmatha</a></li>
-                                <li><a title="How to apply for Admission ?" href="http://sagarmatha.edu.np/home/admission/eligibility-criteria">How to apply for Admission ?</a></li>
+                                <li><a title="Training & Placement Units"
+                                        href="http://sagarmatha.edu.np/home/placements/tpu">Training & Placement
+                                        Units</a></li>
+                                <li><a title="Career options at Sagarmatha"
+                                        href="http://sagarmatha.edu.np/home/human-resource/careers">Career options at
+                                        Sagarmatha</a></li>
+                                <li><a title="How to apply for Admission ?"
+                                        href="http://sagarmatha.edu.np/home/admission/eligibility-criteria">How to apply
+                                        for Admission ?</a></li>
                                 <!--<li><i class="fa fa-file-image-o"></i><a href="#">Gallery </a></li>-->
                             </ul>
                         </aside>
@@ -470,10 +535,15 @@
                             <div class="widget-content">
                                 <form id="subscribe_form">
                                     <div class="form-group">
-                                        <input type="email" class="form-control required" id="subscriber_email" name="subscriber_email" placeholder="your@email.com">
-                                        <button type="button" class="btn btn-default subscribe-button" id="subscribe_button">Subscribe</button>
+                                        <input type="email" class="form-control required" id="subscriber_email"
+                                            name="subscriber_email" placeholder="your@email.com">
+                                        <button type="button" class="btn btn-default subscribe-button"
+                                            id="subscribe_button">Subscribe</button>
 
-                                        <button type="button" class=" subscribe_loader btn btn-default subscribe-button subscribe_loader hidden"> Please wait...</button> &nbsp;&nbsp; <img src="assets/public/additional/loader.gif" class="subscribe_loader hidden">
+                                        <button type="button"
+                                            class=" subscribe_loader btn btn-default subscribe-button subscribe_loader hidden">
+                                            Please wait...</button> &nbsp;&nbsp; <img
+                                            src="assets/public/additional/loader.gif" class="subscribe_loader hidden">
                                     </div>
                                 </form>
                                 <div id="subscribe_message"></div>
@@ -481,11 +551,15 @@
                         </aside>
                         <aside class="widget">
                             <ul class="social-icons">
-                                <li><a href="https://facebook.com/college.sagarmatha/"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="https://facebook.com/college.sagarmatha/"><i
+                                            class="fa fa-facebook"></i></a></li>
                                 <li><a href="https://twitter.com/SECNepal"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="https://www.youtube.com/channel/UCZuJllDV6vYQ81n2mbmhsHA"><i class="fa fa-youtube"></i></a></li>
-                                <li><a href="https://www.linkedin.com/in/secnepal/"><i class="fa fa-linkedin"></i></a></li>
-                                <li><a href="https://www.instagram.com/sagarmathaengineeringcollege/"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="https://www.youtube.com/channel/UCZuJllDV6vYQ81n2mbmhsHA"><i
+                                            class="fa fa-youtube"></i></a></li>
+                                <li><a href="https://www.linkedin.com/in/secnepal/"><i class="fa fa-linkedin"></i></a>
+                                </li>
+                                <li><a href="https://www.instagram.com/sagarmathaengineeringcollege/"><i
+                                            class="fa fa-instagram"></i></a></li>
                             </ul>
                         </aside>
                     </div>
@@ -499,7 +573,8 @@
                             <ul>
                                 <li><i class="fa fa-phone-square"></i>+977-1-5527274 , +977-1-5547463</li>
                                 <li><i class="fa fa-fax"></i>+977-1-5548252</li>
-                                <li><i class="fa fa-envelope-o"></i><a href="mailto:info@sagarmathe.edu.np">info@sagarmatha.edu.np</a></li>
+                                <li><i class="fa fa-envelope-o"></i><a
+                                        href="mailto:info@sagarmathe.edu.np">info@sagarmatha.edu.np</a></li>
                             </ul>
                         </aside>
                     </div>
@@ -511,7 +586,8 @@
                 <p>&copy; Copyright 2020 Sagarmatha Engineering College</p>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 designer">
-                <p>Designed and Developed by <a href="http://podamibe.net/" target="_blank">Podamibe</a> Nepal Pvt Ltd</p>
+                <p>Designed and Developed by <a href="http://podamibe.net/" target="_blank">Podamibe</a> Nepal Pvt Ltd
+                </p>
             </div>
         </div>
 
@@ -544,11 +620,18 @@
 
 
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
 
-    <script src="../ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js" data-cf-settings="cfc804042cf9aa0b751fe35e-|49" defer=""></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="../ajax.cloudflare.com/cdn-cgi/scripts/7089c43e/cloudflare-static/rocket-loader.min.js"
+        data-cf-settings="cfc804042cf9aa0b751fe35e-|49" defer=""></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
     <script type="text/javascript" src="{% static 'assets/public/js/jquery-1.12.3.min.js' %}"></script>
     <script src="{% static 'assets/public/js/bootstrap.min.js' %}"></script>
     <script src="{% static 'assets/public/js/slick.min.js' %}"></script>

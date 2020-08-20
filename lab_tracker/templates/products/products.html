@@ -31,6 +31,7 @@
 
 </head>
 
+
 {% endblock %}
 
 {% block content %}
@@ -43,7 +44,7 @@
             <button class="btn btn-default" id='sear' type="submit"><i class="fa fa-search"></i>
         </form>
     </nav>
-    <div class="row">
+    <div class="row product-box">
 
         <div class="col-md-3 col-md-pull-9 sidebar shop-sidebar">
 
@@ -57,10 +58,13 @@
                         </h4>
                     </div>
                     <div class="list-group" id="list-tab" role="tablist">
-                        <div id="panel-filter-category" class="accordion-body collapse in">
+                        <div id="panel-filter-category" class="accordion-body collapse show in">
                             <div class="panel-body">
                                 <div class="list-group" id="list-tab" role="tablist">
-                                    <a class="list-group-item list-group-item-action active" id="list-arduino-list"
+                                    <a class="list-group-item list-group-item-action active" id="list-all-list"
+                                    data-toggle="list" href="#list-all" role="tab"
+                                    aria-controls="all">All</a>
+                                    <a class="list-group-item list-group-item-action" id="list-arduino-list"
                                         data-toggle="list" href="#list-arduino" role="tab"
                                         aria-controls="arduino">Arduino</a>
                                     <a class="list-group-item list-group-item-action" id="list-motor-list"
@@ -97,9 +101,10 @@
 
         <div class="col-md-9 col-md-push-3">
             <div class="tab-content" id="nav-tabContent">
-                <div class="tab-pane fade show active" id="list-arduino" role="tabpanel"
-                    aria-labelledby="list-arduino-list">
+                <div class="tab-pane fade show active" id="list-all" role="tabpanel"
+                    aria-labelledby="list-all-list">
                     <ul class=" products-grid columns4 ">
+                        <h2 class='font-weight-bold'>Arduino</h2>
                         {% if microcontrollers %}
                         {% for microcontroller in microcontrollers %}
 
@@ -109,8 +114,7 @@
                             <div class="product">
                                 <figure class="product-image-area">
                                     <a href="{% url 'productview' %}" title="Product Name" class="product-image">
-                                        <img src='{{ microcontroller.photo_main.url }}'
-                                            alt="Product Name">
+                                        <img src='{{ microcontroller.photo_main.url }}' alt="Product Name">
                                     </a>
                                     <a href="{% url 'productview' %}" class="product-quickview" data-product="16">
                                         <i class="fa fa-share-square-o"></i>
@@ -143,6 +147,183 @@
 
 
                     </ul>
+                    <ul class=" products-grid columns4 ">
+                        <h2 class='font-weight-bold'> Motors</h2>
+                        {% if motors %}
+                        {% for motor in motors %}
+
+
+
+                        <li>
+                            <div class="product">
+                                <figure class="product-image-area">
+                                    <a href="{% url 'productview' %}" title="Product Name" class="product-image">
+                                        <img src='{{ motor.photo_main.url }}' alt="Product Name">
+                                    </a>
+                                    <a href="{% url 'productview' %}" class="product-quickview" data-product="16">
+                                        <i class="fa fa-share-square-o"></i>
+                                        <span>Quicky View</span>
+                                    </a>
+
+                                </figure>
+                                <div class="product-details-area">
+                                    <h2 class="product-name">
+                                        <a href="product/arduino-uno-r3-board-in-nepal.html"
+                                            title="Arduino Uno R3 board  in Nepal">
+                                            {{motor.title}}
+                                        </a>
+                                    </h2>
+
+                                    <div class="product-actions" data-product="16">
+
+                                        <a href="contact.html" class="enquiry" title="Enquiry"
+                                            data-loading-text="Loading...">
+                                            <i class="fa fa-info"></i>
+                                            <span>Enquiry</span>
+                                        </a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        {% endfor %}
+                        {% endif %}
+
+
+                    </ul>
+                    <h2 class='font-weight-bold'>LED</h2>
+                    <ul class=" products-grid columns4 ">
+                        {% if leds %}
+                        {% for led in leds %}
+
+
+
+                        <li>
+                            <div class="product">
+                                <figure class="product-image-area">
+                                    <a href="{% url 'productview' %}" title="Product Name" class="product-image">
+                                        <img src='{{ led.photo_main.url }}' alt="Product Name">
+                                    </a>
+                                    <a href="{% url 'productview' %}" class="product-quickview" data-product="16">
+                                        <i class="fa fa-share-square-o"></i>
+                                        <span>Quicky View</span>
+                                    </a>
+
+                                </figure>
+                                <div class="product-details-area">
+                                    <h2 class="product-name">
+                                        <a href="product/arduino-uno-r3-board-in-nepal.html"
+                                            title="Arduino Uno R3 board  in Nepal">
+                                            {{led.title}}
+                                        </a>
+                                    </h2>
+
+                                    <div class="product-actions" data-product="16">
+
+                                        <a href="contact.html" class="enquiry" title="Enquiry"
+                                            data-loading-text="Loading...">
+                                            <i class="fa fa-info"></i>
+                                            <span>Enquiry</span>
+                                        </a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        {% endfor %}
+                        {% endif %}
+
+
+                    </ul>
+                    <h2 class='font-weight-bold'>Sensors</h2>
+                    <ul class=" products-grid columns4 ">
+                        {% if sensors %}
+                        {% for sensor in sensors %}
+
+
+
+                        <li>
+                            <div class="product">
+                                <figure class="product-image-area">
+                                    <a href="{% url 'productview' %}" title="Product Name" class="product-image">
+                                        <img src='{{ sensor.photo_main.url }}' alt="Product Name">
+                                    </a>
+                                    <a href="{% url 'productview' %}" class="product-quickview" data-product="16">
+                                        <i class="fa fa-share-square-o"></i>
+                                        <span>Quicky View</span>
+                                    </a>
+
+                                </figure>
+                                <div class="product-details-area">
+                                    <h2 class="product-name">
+                                        <a href="product/arduino-uno-r3-board-in-nepal.html"
+                                            title="Arduino Uno R3 board  in Nepal">
+                                            {{sensor.title}}
+                                        </a>
+                                    </h2>
+
+                                    <div class="product-actions" data-product="16">
+
+                                        <a href="contact.html" class="enquiry" title="Enquiry"
+                                            data-loading-text="Loading...">
+                                            <i class="fa fa-info"></i>
+                                            <span>Enquiry</span>
+                                        </a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        {% endfor %}
+                        {% endif %}
+
+
+                    </ul>
+                    <h2 class='font-weight-bold'>Jumper Wires</h2>
+                    <ul class=" products-grid columns4 ">
+                        {% if wires %}
+                        {% for wire in wires %}
+
+
+
+                        <li>
+                            <div class="product">
+                                <figure class="product-image-area">
+                                    <a href="{% url 'productview' %}" title="Product Name" class="product-image">
+                                        <img src='{{ wire.photo_main.url }}' alt="Product Name">
+                                    </a>
+                                    <a href="{% url 'productview' %}" class="product-quickview" data-product="16">
+                                        <i class="fa fa-share-square-o"></i>
+                                        <span>Quicky View</span>
+                                    </a>
+
+                                </figure>
+                                <div class="product-details-area">
+                                    <h2 class="product-name">
+                                        <a href="product/arduino-uno-r3-board-in-nepal.html"
+                                            title="Arduino Uno R3 board  in Nepal">
+                                            {{wire.title}}
+                                        </a>
+                                    </h2>
+
+                                    <div class="product-actions" data-product="16">
+
+                                        <a href="contact.html" class="enquiry" title="Enquiry"
+                                            data-loading-text="Loading...">
+                                            <i class="fa fa-info"></i>
+                                            <span>Enquiry</span>
+                                        </a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        {% endfor %}
+                        {% endif %}
+
+
+                    </ul>
+                    <!-- Add the components here for all category -->
                     <nav aria-label="Page navigation example">
                         <ul class="pagination">
                             <li class="page-item disabled">
@@ -154,13 +335,76 @@
                             </li>
                             <li class="page-item"><a class="page-link" href="#">3</a></li>
                             <li class="page-item">
-                                 <a class="page-link" href="#">Next</a>
+                                <a class="page-link" href="#">Next</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="tab-pane fade show" id="list-arduino" role="tabpanel"
+                    aria-labelledby="list-arduino-list">
+                    <ul class=" products-grid columns4 ">
+                        
+                        {% if microcontrollers %}
+                        {% for microcontroller in microcontrollers %}
+
+
+
+                        <li>
+                            <div class="product">
+                                <figure class="product-image-area">
+                                    <a href="{% url 'productview' %}" title="Product Name" class="product-image">
+                                        <img src='{{ microcontroller.photo_main.url }}' alt="Product Name">
+                                    </a>
+                                    <a href="{% url 'productview' %}" class="product-quickview" data-product="16">
+                                        <i class="fa fa-share-square-o"></i>
+                                        <span>Quicky View</span>
+                                    </a>
+
+                                </figure>
+                                <div class="product-details-area">
+                                    <h2 class="product-name">
+                                        <a href="product/arduino-uno-r3-board-in-nepal.html"
+                                            title="Arduino Uno R3 board  in Nepal">
+                                            {{microcontroller.title}}
+                                        </a>
+                                    </h2>
+
+                                    <div class="product-actions" data-product="16">
+
+                                        <a href="contact.html" class="enquiry" title="Enquiry"
+                                            data-loading-text="Loading...">
+                                            <i class="fa fa-info"></i>
+                                            <span>Enquiry</span>
+                                        </a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        {% endfor %}
+                        {% endif %}
+
+
+                    </ul>
+                    
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination">
+                            <li class="page-item disabled">
+                                <a class="page-link " href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item active" aria-current="page">
+                                <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">Next</a>
                             </li>
                         </ul>
                     </nav>
                 </div>
                 <div class="tab-pane fade" id="list-motor" role="tabpanel" aria-labelledby="list-motor-list">Motori
-                     <ul class=" products-grid columns4 ">
+                    <ul class=" products-grid columns4 ">
                         {% if motors %}
                         {% for motor in motors %}
 
@@ -170,8 +414,7 @@
                             <div class="product">
                                 <figure class="product-image-area">
                                     <a href="{% url 'productview' %}" title="Product Name" class="product-image">
-                                        <img src='{{ motor.photo_main.url }}'
-                                            alt="Product Name">
+                                        <img src='{{ motor.photo_main.url }}' alt="Product Name">
                                     </a>
                                     <a href="{% url 'productview' %}" class="product-quickview" data-product="16">
                                         <i class="fa fa-share-square-o"></i>
@@ -234,8 +477,7 @@
                             <div class="product">
                                 <figure class="product-image-area">
                                     <a href="{% url 'productview' %}" title="Product Name" class="product-image">
-                                        <img src='{{ led.photo_main.url }}'
-                                            alt="Product Name">
+                                        <img src='{{ led.photo_main.url }}' alt="Product Name">
                                     </a>
                                     <a href="{% url 'productview' %}" class="product-quickview" data-product="16">
                                         <i class="fa fa-share-square-o"></i>
@@ -284,9 +526,9 @@
                         </ul>
                     </nav>
                 </div>
-                
-                
-           
+
+
+
                 <div class="tab-pane fade" id="list-sensors" role="tabpanel" aria-labelledby="list-led-list">Sensors
                     <ul class=" products-grid columns4 ">
                         {% if sensors %}
@@ -298,8 +540,7 @@
                             <div class="product">
                                 <figure class="product-image-area">
                                     <a href="{% url 'productview' %}" title="Product Name" class="product-image">
-                                        <img src='{{ sensor.photo_main.url }}'
-                                            alt="Product Name">
+                                        <img src='{{ sensor.photo_main.url }}' alt="Product Name">
                                     </a>
                                     <a href="{% url 'productview' %}" class="product-quickview" data-product="16">
                                         <i class="fa fa-share-square-o"></i>
@@ -348,8 +589,8 @@
                         </ul>
                     </nav>
                 </div>
-                
-                
+
+
                 <div class="tab-pane fade" id="list-jumper_wires" role="tabpanel" aria-labelledby="list-led-list">
                     jumper_wires
                     <ul class=" products-grid columns4 ">
@@ -362,8 +603,7 @@
                             <div class="product">
                                 <figure class="product-image-area">
                                     <a href="{% url 'productview' %}" title="Product Name" class="product-image">
-                                        <img src='{{ wire.photo_main.url }}'
-                                            alt="Product Name">
+                                        <img src='{{ wire.photo_main.url }}' alt="Product Name">
                                     </a>
                                     <a href="{% url 'productview' %}" class="product-quickview" data-product="16">
                                         <i class="fa fa-share-square-o"></i>
@@ -412,7 +652,7 @@
                         </ul>
                     </nav>
                 </div>
-        
+
                 <div class="tab-pane fade" id="list-matrix_board" role="tabpanel" aria-labelledby="list-led-list">
                     matrix_board</div>
                 <div class="tab-pane fade" id="list-iron" role="tabpanel" aria-labelledby="list-led-list">iron</div>
