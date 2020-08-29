@@ -75,6 +75,7 @@
 
             <div class="collapse navbar-collapse collapse-home">
                 <ul class="nav navbar-nav navbar-right " id="main_menu">
+
                     <style type="text/css">
                         .navbar-default .navbar-nav .active .about,
                         .navbar-default .navbar-nav li:hover .about,
@@ -84,9 +85,8 @@
                     </style>
                     <li class="dropdown mega-dropdown">
                         <a href="{% url 'index' %}" role="button">Lab Tracker </a>
-
-
                     </li>
+
                     <style type="text/css">
                         .navbar-default .navbar-nav .active .about,
                         .navbar-default .navbar-nav li:hover .about,
@@ -96,9 +96,8 @@
                     </style>
                     <li class="dropdown mega-dropdown">
                         <a href="{% url 'about' %}" role="button"><i class="fa fa-address-book about"></i>About </a>
-
-
                     </li>
+
                     <style type="text/css">
                         .navbar-default .navbar-nav .active .about,
                         .navbar-default .navbar-nav li:hover .about,
@@ -106,10 +105,9 @@
                             color: #008e5c;
                         }
                     </style>
-
+                    
                     <li class="dropdown mega-dropdown">
-                        <a href="{% url 'products' %}" role="button"><i class="fa fa-th" aria-hidden="true"></i>Category
-                        </a>
+                        <a href="{% url 'products' %}" role="button"><i class="fa fa-th" aria-hidden="true"></i>Category</a>
                     </li>
 
                     <style type="text/css">
@@ -120,22 +118,20 @@
                         }
                     </style>
                     <li class="dropdown mega-dropdown">
-                        <a href="{% url 'login' %}" role="button"><i class="fa fa-rss" aria-hidden="true"></i>Blog </a>
-
-
+                        <a href="{% url 'ongoing_events' %}" role="button"><i class="fa fa-rss" aria-hidden="true"></i>Blog </a>
                     </li>
+
                     <style type="text/css">
-                        .navbar-default .navbar-nav .active .about,
-                        .navbar-default .navbar-nav li:hover .about,
-                        .navbar-default .navbar-right>.open>a:focus .contact {
-                            color: #008e5c;
+                        .navbar-default .navbar-nav .active .admission,
+                        .navbar-default .navbar-nav li:hover .admission,
+                        .navbar-default .navbar-right>.open>a:focus .admission {
+                            color: #8dbb27;
                         }
                     </style>
                     <li class="dropdown mega-dropdown">
                         <a href="{% url 'ongoing_events' %}" role="button"><i class="fa fa-calendar"></i>Events</a>
-
-
                     </li>
+
                     <style type="text/css">
                         .navbar-default .navbar-nav .active .about,
                         .navbar-default .navbar-nav li:hover .about,
@@ -145,9 +141,8 @@
                     </style>
                     <li class="dropdown mega-dropdown">
                         <a href="{% url 'login' %}" role="button"><i class="fa fa-envelope-open"></i>Contact </a>
-
-
                     </li>
+                    
                     <style type="text/css">
                         .navbar-default .navbar-nav .active .about,
                         .navbar-default .navbar-nav li:hover .about,
@@ -156,10 +151,11 @@
                         }
                     </style>
                     <li class="dropdown mega-dropdown">
-                        <a href="{% url 'faq' %}" role="button"><i class="fa fa-info-circle" aria-hidden="true"></i>FAQ
-                        </a>
-
+                        <a href="{% url 'faq' %}" role="button"><i class="fa fa-info-circle" aria-hidden="true"></i>FAQ </a>
                     </li>
+
+                    
+                    
                     <style type="text/css">
                         .navbar-default .navbar-nav .active .about,
                         .navbar-default .navbar-nav li:hover .about,
@@ -167,23 +163,24 @@
                             color: #008e5c;
                         }
                     </style>
+                    {% if user.is_authenticated %}
                     <li class="dropdown mega-dropdown">
-                        <a href="{% url 'login' %}" role="button"><i class="fa fa-sign-in" aria-hidden="true"></i>Login
-                        </a>
-
+                        <a href="{% url 'dashboard' %}" role="button"><i class="fa fa-sign-in" aria-hidden="true"></i>Dashboard</a>
                     </li>
-                    <style type="text/css">
-                        .navbar-default .navbar-nav .active .about,
-                        .navbar-default .navbar-nav li:hover .about,
-                        .navbar-default .navbar-right>.open>a:focus .contact {
-                            color: #008e5c;
-                        }
-                    </style>
                     <li class="dropdown mega-dropdown">
-                        <a href="{% url 'register' %}" role="button"><i class="fa fa-sign-in"
-                                aria-hidden="true"></i>Register </a>
-
+                        <a href="{% url 'logout' %}" role="button"><i class="fa fa-sign-in" aria-hidden="true"></i>Logout</a>
                     </li>
+                    {% else %}
+                    <li class="dropdown mega-dropdown">
+                        <a href="{% url 'login' %}" role="button"><i class="fa fa-sign-in" aria-hidden="true"></i>Register/Login </a>
+                    </li>
+
+                    {% endif %}
+                    
+                    
+
+
+
                 </ul>
             </div>
             <div class="collapse navbar-collapse collapse-hidden" id="bs-example-navbar-collapse-1">
@@ -208,12 +205,19 @@
                     <li class="dropdown ">
                         <a href="{% url 'faq' %}"><i class="fa fa-info-circle" aria-hidden="true"></i>FAQ </a>
                     </li>
+                    {% if user.is_authenticated %}
+                    
                     <li class="dropdown ">
-                        <a href="{% url 'login' %}"><i class="fa fa-sign-in" aria-hidden="true"></i>Login </a>
+                        <a href="{% url 'dashboard' %}"><i class="fa fa-sign-in" aria-hidden="true"></i>Dashboard </a>
                     </li>
                     <li class="dropdown ">
-                        <a href="{% url 'register' %}"><i class="fa fa-sign-in" aria-hidden="true"></i>Register </a>
+                        <a href="{% url 'logout' %}"><i class="fa fa-sign-in" aria-hidden="true"></i>Logout </a>
                     </li>
+                    {% else %}
+                    <li class="dropdown ">
+                        <a href="{% url 'login' %}"><i class="fa fa-sign-in" aria-hidden="true"></i>Register/Login </a>
+                    </li>
+                    {% endif %}
                 </ul>
             </div>
         </div>
